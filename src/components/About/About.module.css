@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    height: 100vh;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .author {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .institution {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .year {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .paragraph {
+    font-size: 1.2rem;
+  }
+  

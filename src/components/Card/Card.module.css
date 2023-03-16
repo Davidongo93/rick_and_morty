@@ -1,0 +1,45 @@
+.card {
+    background-color: rgba(85, 4, 126, 0.593);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 1em;
+    box-shadow: -1px 12px 42px 19px rgba(0,0,0,0.69);
+    display:block;
+    flex-direction: column;
+  }
+  
+  .imageContainer {
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 50%;
+  }
+  
+  .profileImage {
+    border-radius: 50%;
+  }
+  
+  .name,
+  .species,
+  .gender {
+    color: #7FFF00;
+  }
+  
+  .closeButton {
+    width: fit-content;
+    height: fit-content;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: .3s
+  }
+
+  .closeButton:hover{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.69);
+  }
+  
