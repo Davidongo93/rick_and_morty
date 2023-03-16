@@ -1,19 +1,19 @@
 /* Imagen de fondo para dispositivos en modo paisaje */
 @media screen and (orientation: landscape) {
-   .App {
-     background-image: url(https://images.squarespace-cdn.com/content/v1/569472270ab3776bee48284e/1575168019165-J5JIHHYOE6Z8HIO7XDBT/image-asset.png?format=2500w);
-     background-size: contain;
-     background-position: center;
-   }
- }
- 
- /* Imagen de fondo para dispositivos en modo vertical */
- @media screen and (orientation: portrait) {
-   .App {
-     background-image: url(https://www.xtrafondos.com/wallpapers/vertical/rick-y-morty-en-el-espacio-6046.jpg);
-     background-size: contain;
-     background-position: center;
-     
-   }
- }
- 
+  .App {
+    background-image: url(https://images.squarespace-cdn.com/content/v1/569472270ab3776bee48284e/1575168019165-J5JIHHYOE6Z8HIO7XDBT/image-asset.png?format=2500w);
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+  }
+}
+
+/* Imagen de fondo para dispositivos en modo vertical */
+@media screen and (orientation: portrait) {
+  .App {
+    background-image: url(https://www.xtrafondos.com/wallpapers/vertical/rick-y-morty-en-el-espacio-6046.jpg);
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+  }
+}

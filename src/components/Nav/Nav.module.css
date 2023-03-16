@@ -30,15 +30,15 @@
   
   nav a {
     text-decoration: none;
-    color: #800080; /* púrpura */
+    color: #800080;
     transition: color 0.2s ease-in-out;
   }
   
   nav a:hover {
-    color: #7fff00; /* verde ácido */
+    color: #7fff00;
   }
   
   .nav-active {
-    color: #7fff00; /* verde ácido */
+    color: #7fff00;
   }
   

@@ -19,7 +19,7 @@ useEffect(()=>{
   !access && navigate("/");
   
 }, [access])
-// Credentials
+// fakeCredentials
 const username = "domirandar@unal.edu.co";
 const password = "Password93";
 
@@ -61,11 +61,11 @@ if (characters.find((char)=> char.id === id )){
     <div className={style.App} style={{ padding: "25px" }}>
       {pathname === "/" ? null : <Nav onSearch={onSearch} />}
       <Routes>
-        <Route path="/" element={<Form login={login} />} />
+        <Route
+         path="/" element={<Form login={login} />} />
         <Route
           path="/home"
-          element={<Cards characters={characters} onClose={onClose} />}
-        />
+          element={<Cards characters={characters} onClose={onClose} />} />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:detailId" element={<Detail />} />
       </Routes>
