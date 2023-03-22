@@ -25,13 +25,15 @@ const password = "Password93";
 
   // Handlers
   const onSearch = (id) =>{
-    const URL_BASE = "https://be-a-rym.up.railway.app/api";
-    const API_KEY = "64ca84b60b66.7d4133ef550826b67559";
+ /*    const URL_BASE = "https://be-a-rym.up.railway.app/api";
+    const API_KEY = "64ca84b60b66.7d4133ef550826b67559"; */
+    const URL_BASE = 'http://localhost:3001/rickandmorty'
 if (characters.find((char)=> char.id === id )){
   return alert('El personaje ya se mostró.')
 }
 
-    fetch(`${URL_BASE}/character/${id}?key=${API_KEY}`)
+   // fetch(`${URL_BASE}/character/${id}?key=${API_KEY}`)
+   fetch(`${URL_BASE}/character/${id}`)
     .then(response=>response.json())
     .then(data=>{
       if (data.name) {
