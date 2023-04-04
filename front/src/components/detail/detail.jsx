@@ -6,9 +6,8 @@ const Detail = () => {
     const {detailId} = useParams();
     const [character,setCharacter] = useState({});
     useEffect (() => {
-        const URL_BASE = "https://be-a-rym.up.railway.app/api";
-        const API_KEY = "64ca84b60b66.7d4133ef550826b67559";
-        axios (`${URL_BASE}/character/${detailId}?key=${API_KEY}`).then((response)=>
+        const URL_BASE = 'http://localhost:3001';
+        axios (`${URL_BASE}/detail/${detailId}`).then((response)=>
          setCharacter(response.data)
         );
      },[]);

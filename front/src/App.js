@@ -1,3 +1,4 @@
+import axios from "axios";
 import style from './App.module.css';
 import Cards from './components/Cards/Cards.jsx';
 import Nav from './components/Nav/Nav.jsx';
@@ -27,23 +28,29 @@ const password = "Password93";
   const onSearch = (id) =>{
  /*    const URL_BASE = "https://be-a-rym.up.railway.app/api";
     const API_KEY = "64ca84b60b66.7d4133ef550826b67559"; */
-    const URL_BASE = 'http://localhost:3001/rickandmorty'
+    const URL_BASE = 'http://localhost:3001'
 if (characters.find((char)=> char.id === id )){
   return alert('El personaje ya se mostró.')
 }
 
    // fetch(`${URL_BASE}/character/${id}?key=${API_KEY}`)
-   fetch(`${URL_BASE}/character/${id}`)
-    .then(response=>response.json())
-    .then(data=>{
+
+
+  axios.get(`${URL_BASE}/onsearch/${id}`)
+    .then((response) => {
+      const data = response.data;
       if (data.name) {
         setCharacters((oldChars) => [...oldChars, data]);
-        // setCharacters([...characters, data]); ojito 
       } else {
         alert("Algo salió mal");
       }
+    })
+    .catch((error) => {
+      console.log(error);
+      alert("Algo salió mal");
     });
-  };
+  
+};
 
   const onClose = (id) => {
     setCharacters(characters.filter((char)=>char.id !== id))

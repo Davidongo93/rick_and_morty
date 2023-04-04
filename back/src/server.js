@@ -1,26 +1,20 @@
-const http = require('http');
-const characters = require('./utils/data');
+require("dotenv").config();
+const express = require("express");
+const cors = require("cors"); // Importando el CORS middleware
+const router = require("./routes");
+const morgan = require("morgan");
 
-const server = http.createServer((req, res) => {
-  
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    if (req.url.includes(`rickandmorty/character`)){
-        const id = req.url.match(/\/(\d+)$/)[1];
-        const character = characters.find(c => c.id === Number(id));
-        if (character) {
-            res.setHeader('Content-Type', 'application/json');
-            res.end(JSON.stringify(character));
-            return;
-            
-          }
-          
-          res.statusCode = 404;
-          res.end('404 Not Found');
-          
-    } 
+const PORT = process.env.PORT || 3001;
+
+const server = express();
+server.use(express.json());
+server.use(morgan("dev"));
+
+// Usando el CORS middleware
+server.use(cors());
+
+server.use("/", router);
+
+server.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
-
-server.listen(3001, () => {
-  console.log('Servidor escuchando en el puerto 3001');
-});
-
